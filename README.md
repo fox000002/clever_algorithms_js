@@ -1,4 +1,4 @@
-# clever_algorithms [![Build Status](https://secure.travis-ci.org/hu/clever_algorithms_js.png?branch=master)](http://travis-ci.org/hu/clever_algorithms_js)
+# clever_algorithms [![Build Status](https://secure.travis-ci.org/fox000002/clever_algorithms_js.png?branch=master)](http://travis-ci.org/fox000002/clever_algorithms_js)
 
 Clever Algorithmes in JS.
 
@@ -6,8 +6,8 @@ Clever Algorithmes in JS.
 Install the module with: `npm install clever_algorithms`
 
 ```javascript
-var clever_algorithms = require('clever_algorithms');
-clever_algorithms.awesome(); // "awesome"
+var rs = require('clever_algorithms_js').random_search;
+rs.run();
 ```
 
 ## Documentation

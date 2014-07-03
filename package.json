@@ -1,0 +1,23 @@
+{
+  "name": "clever_algorithms_js",
+  "description": "Clever Algorithmes in JS.",
+  "version": "0.1.1",
+  "author": {
+	"name": "Yuansi Hu",
+	"email": "huys03@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fox000002/clever_algorithms_js.git"
+  },
+  "main": "index",
+  "bin": {
+    "cajs": "./bin/cajs"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}

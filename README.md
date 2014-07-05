@@ -3,7 +3,7 @@
 Clever Algorithmes in JS.
 
 ## Getting Started
-Install the module with: `npm install clever_algorithms`
+Install the module with: `npm install clever_algorithms_js`
 
 ```javascript
 var rs = require('clever_algorithms_js').random_search;

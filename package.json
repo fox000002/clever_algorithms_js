@@ -1,7 +1,7 @@
 {
   "name": "clever_algorithms_js",
   "description": "Clever Algorithmes in JS.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/fox000002/clever_algorithms_js",
   "author": {
     "name": "Yuansi Hu",
@@ -23,7 +23,7 @@
   ],
   "main": "index",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 0.10.0"
   },
   "scripts": {
     "test": "grunt nodeunit"

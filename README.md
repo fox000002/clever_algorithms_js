@@ -1,6 +1,6 @@
 # clever_algorithms [![Build Status](https://secure.travis-ci.org/fox000002/clever_algorithms_js.png?branch=master)](http://travis-ci.org/fox000002/clever_algorithms_js)
 
-Clever Algorithmes in JS.
+Clever Algorithms in JS.
 
 ## Getting Started
 Install the module with: `npm install clever_algorithms_js`

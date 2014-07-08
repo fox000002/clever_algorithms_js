@@ -6,18 +6,18 @@ exports['objective'] = function (test) {
 };
 
 exports['random_vector'] = function (test) {
-	var rv = de.random_vector([[1, 2], [2, 3]]);
-	test.equal(rv.length, 2);
+    var rv = de.random_vector([[1, 2], [2, 3]]);
+    test.equal(rv.length, 2);
     test.ok(1 <= rv[0] && rv[0] <= 2);
     test.ok(2 <= rv[1] && rv[1] <= 3);
-    test.done();	
+    test.done();    
 };
 
 exports['generate_array'] = function (test) {
-	var a = de.generate_array([-5, 5], 2);
-	test.equal(a.length, 2);
-	test.deepEqual(a, [[-5,5], [-5,5]]);
-    test.done();		
+    var a = de.generate_array([-5, 5], 2);
+    test.equal(a.length, 2);
+    test.deepEqual(a, [[-5,5], [-5,5]]);
+    test.done();        
 };
 
 exports['de_rand_1_bin'] = function (test) {
@@ -30,10 +30,10 @@ exports['de_rand_1_bin'] = function (test) {
         0, 0, [[0,1], [0,1]]);
     test.notEqual(rs['vector'], null);
     test.equal(2, rs['vector'].length);
-    for (var v in rs['vector']) {
+    for (var v1 in rs['vector']) {
         //console.log(v);
-        test.ok(v>=0);
-        test.ok(v<=1);
+        test.ok(v1>=0);
+        test.ok(v1<=1);
     }
     // all crossover
     var p0 = {'vector': [0,0]},
@@ -44,16 +44,22 @@ exports['de_rand_1_bin'] = function (test) {
         rs = de.de_rand_1_bin(p0, p1, p2, p3, 0.5, 1.0, [[0,1], [0,1]]);
         test.notEqual(rs['vector'], null);
         test.equal(2, rs['vector'].length);
-        for (var v in rs['vector']) {
+        for (var v2 in rs['vector']) {
             //console.log(v);
-            test.ok(v>=0);
-            test.ok(v<=1);
+            test.ok(v2>=0);
+            test.ok(v2<=1);
         }
     }
     test.done();
 };
 
 exports['select_parents'] = function (test) {
+    function makeFilter(value) {
+        return function(elem) {
+            return elem === value;
+        };
+    }
+
     for (var j=0; j<100; j++) {
         var pop = [
             {'a': "a"},
@@ -75,7 +81,7 @@ exports['select_parents'] = function (test) {
             test.notEqual(x, current);
             test.ok(x>=0);
             test.ok(x<pop.length);
-            test.equal(1, rs.filter(function(v){ return v===x;}).length);
+            test.equal(1, rs.filter(makeFilter(x)).length);
         }
     }
     test.done();
@@ -130,8 +136,8 @@ exports['select_population'] = function (test) {
         {'cost': 0.3}
     ];
     selected = de.select_population(parents, children);
-    for (var i=0; i<selected.length; i++) {
-        test.equal(selected[i], children[i]);
+    for (var j=0; j<selected.length; j++) {
+        test.equal(selected[j], children[j]);
     }
     test.done();
 };

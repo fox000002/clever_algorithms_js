@@ -21,10 +21,24 @@ module.exports = function(grunt) {
         src: ['test/**/*.js']
       }
     },
+    coffee: {
+        compile: {
+            expand: true,
+            preserve_dirs: true,
+            cwd: 'lib',
+            src: ['**/*.coffee'],
+            dest: 'lib',
+            ext: '.js'
+        }
+    },
     watch: {
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
+      },
+      coffee: {
+        files: ['lib/**/*.coffee'],
+        tasks: ['coffee:compile']
       },
       lib: {
         files: '<%= jshint.lib.src %>',
@@ -41,8 +55,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'nodeunit']);
+  grunt.registerTask('default', ['coffee', 'jshint', 'nodeunit']);
 
 };

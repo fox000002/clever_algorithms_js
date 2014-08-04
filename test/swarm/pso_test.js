@@ -1,5 +1,8 @@
 var pso = require('../../lib/swarm/pso');
 
+// Disable console output
+console.log = function(){};
+
 exports['objective'] = function (test) {
     test.equal(pso.objective_function([1, 2]), 5);
     // integer

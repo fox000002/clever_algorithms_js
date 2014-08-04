@@ -1,5 +1,8 @@
 var sa = require('../../lib/physical/simulated_annealing');
 
+// Disable console output
+console.log = function(){};
+
 exports['euc_2d'] = function (test) {
     test.equal(0, sa.euc_2d([0,0], [0,0]));
     test.equal(0, sa.euc_2d([1.1,1.1], [1.1,1.1]));

@@ -1,5 +1,8 @@
 var perceptron = require('../../lib/neural/perceptron');
 
+// Disable console output
+console.log = function(){};
+
 exports['random_vector'] = function (test) {
     var rv = perceptron.random_vector([[1, 2], [2, 3]]);
     test.equal(rv.length, 2);

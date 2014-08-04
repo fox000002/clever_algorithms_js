@@ -1,5 +1,8 @@
 var de = require('../../lib/evolutionary/differential_evolution');
 
+// Disable console output
+console.log = function(){};
+
 exports['objective'] = function (test) {
     test.equal(de.objective_function([1, 2]), 5);
     test.done();

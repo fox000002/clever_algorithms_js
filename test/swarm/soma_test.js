@@ -1,5 +1,7 @@
-var soma = require('../../lib/swarm/soma')
+var soma = require('../../lib/swarm/soma');
 
+// Disable console output
+console.log = function(){};
 
 exports['objective'] = function (test) {
     test.equal(soma.objective_function([1, 2]), 5);
@@ -8,7 +10,7 @@ exports['objective'] = function (test) {
     // float
     test.equal(0.1 * 0.1, soma.objective_function([0.1]));
     // vector
-    test.equal(1 * 1 + 2 * 2 + 3 * 3, soma.objective_function([1, 2, 3]));
+    test.equal(1 + 2 * 2 + 3 * 3, soma.objective_function([1, 2, 3]));
     // optima
     test.equal(0, soma.objective_function([0, 0]));
     test.done();

@@ -1,5 +1,8 @@
 var random_search = require('../../lib/stochastic/random_search');
 
+// Disable console output
+console.log = function(){};
+
 exports['objective'] = function (test) {
     test.equal(random_search.objective_function([1, 2]), 5);
     test.done();

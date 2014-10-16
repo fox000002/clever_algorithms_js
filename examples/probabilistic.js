@@ -1,2 +1,2 @@
-var boa = require('clever_algorithms_js').boa;
+var boa = require('../../clever_algorithms_js').boa;
 boa.run();

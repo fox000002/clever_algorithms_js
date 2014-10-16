@@ -1,5 +1,5 @@
-var pso = require('clever_algorithms_js').pso;
+var pso = require('../../clever_algorithms_js').pso;
 pso.run();
 
-var soma = require('clever_algorithms_js').soma;
+var soma = require('../../clever_algorithms_js').soma;
 soma.run();

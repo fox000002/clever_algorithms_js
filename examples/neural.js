@@ -1,2 +1,2 @@
-var perceptron = require('clever_algorithms_js').perceptron;
+var perceptron = require('../../clever_algorithms_js').perceptron;
 perceptron.run();

@@ -1,2 +1,2 @@
-var airs = require('clever_algorithms_js').airs;
+var airs = require('../../clever_algorithms_js').airs;
 airs.run();

@@ -25,7 +25,7 @@
     a = random_search.generate_array([-5, 5], 2);
     test.equal(a.length, 2);
     test.deepEqual(a, [[-5, 5], [-5, 5]]);
-    return test.done();
+    test.done();
   };
 
   exports['search'] = function(test) {
@@ -36,7 +36,7 @@
     best = random_search.search(search_space, max_iter);
     test.notEqual(best, {});
     test.ok((-5 <= (_ref = best['cost']) && _ref <= 5));
-    return test.done();
+    test.done();
   };
 
 }).call(this);

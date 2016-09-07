@@ -13,6 +13,7 @@ rs.run();
 ## Documentation
 _(Coming soon)_
 
+
 ## Examples
 ```javascript
 var rs = require('clever_algorithms_js').random_search;
